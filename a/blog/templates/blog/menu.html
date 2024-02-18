@@ -1,0 +1,55 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}"> 
+</head>
+
+<div class="header_div_flex">
+    <div class="header_div">
+       <header class="header" id="header">
+        
+                <div class="logo_flex">
+                    <img 
+                        src="{% static 'img/navbar/logo.svg' %}" 
+                        id="navbar_logo"
+                        alt="logo_vector_icon"
+                    />
+                </div>
+
+            <div class="ticker" id="ticker">
+                <marquee id="ticker_text">
+                    News & Discussions — Crypto news and 
+                    expert assessment of the best projects — 
+                </marquee>
+            </div>
+
+            <nav>
+                <div class="navigation_bar" id="nav_routes">
+                    <li class="nav_item">
+                        <a href="{% url 'post_list' %}">
+                            <span class="nav_item_text">
+                                News
+                            </span>
+                        </a>
+                    </li>
+                         
+                    <li class="nav_item">
+                        <a href="{% url 'company_ratings' %}" >
+                            <span class="nav_item_text">Invest</span>
+                        </a>
+                    </li>
+                
+                    <li class="nav_item">
+                        <a href="{% url 'about' %}">
+                            <span class="nav_item_text">About</span>
+                        </a>
+                    </li>
+                </div>
+            </nav>
+        </header>
+       
+    </div>
+</div>
+
+<script src="{% static 'js/navigation.js' %}"></script>

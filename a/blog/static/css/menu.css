@@ -1,0 +1,89 @@
+/* Header */
+
+.header_div_flex {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 40px;
+    z-index: 10;
+}
+
+.header_div {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 48px;
+    background: rgba(244, 244, 244, 0.50);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 950px;
+    padding: 12px 12px 12px 40px;
+}
+
+/* Logo */
+
+#navbar_logo{
+    cursor: pointer;
+}
+
+/* Ticker */
+
+.ticker {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    color: var(--Dark-Grey, #3C3C3C);
+    text-overflow: ellipsis;
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    transition: all 0.5s ease-out;
+}
+
+/* Navbar */
+
+.navigation_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav_item {
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.nav_item:hover {
+    background: #FFF;
+}
+
+.nav_active, .nav_active:hover {
+    background: var(--Orange, #FE6A25);
+    color: #FFF;
+}
+
+.nav_item_text {
+    color: var(--Black, #141919);
+    font-family: Inter, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

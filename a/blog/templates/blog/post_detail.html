@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container"><br><br>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="main-content">
+    <a class="icon-link" href="{% url 'post_list' %}">&larr; Crypto News</a><br>
+    <h3 class="p-4 mb-3 bg-body-tertiary rounded">{{ post.title }}</h3>
+    <div class="row">
+        <div class="col-md-8">
+            {% if post.tag_posts %}
+                <div class="tags">
+                    {% for tag in post.tag_posts.all %}
+                        <div class="btn btn-light btn-sm mb-1">{{ tag }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-4 text-right">
+            <p class="btn btn-light btn-sm mb-1">{{ post.pub_date|date:"M j, Y" }}</p>
+        </div>
+    </div>
+    <p>{{ post.content|linebreaksbr }}<br><br>
+
+
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="post-tags">
+    <div class="post" align="center">
+        {% for tag in tags_posts %}
+            <code><a class="btn btn-light btn-sm mb-1" href="{% url 'tag_result' tag=tag %}">{{ tag }}</a></code>
+        {% endfor %}
+    </div><br>
+
+            </div>
+        </div>
+    </div>
+</div><br><br>
+{% endblock %}

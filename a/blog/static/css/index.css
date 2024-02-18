@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 40px 80px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.href_tag {
+    color: #141919;
+}
+
+.big_tag_item {
+    padding: 9px 16px 9px 16px;
+    border-radius: 24px;
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    background: #FFFFFF;
+    color: #141919;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.sm_tag_item {
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: var(--White, #FFF);
+    color: var(--Black, #141919);
+    font-family: Inter, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.sm_tag_item:hover,
+.big_tag_item:hover {
+    background: #BDD4FA;
+}
+
+.share_icon_style {
+    width: 24px;
+    height: 24px;
+    background: url('../img/share.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.share_dropdown_div {
+    display: none;
+    padding: 4px;
+    width: max-content;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: var(--White, #FFF);
+    box-shadow: 0px 5px 10px 0px #D8D8D8;
+    position: absolute;
+    bottom: -160px;
+    right: -10px;
+    z-index: 20;
+}
+
+.share_dropdown_div.active {
+    display: flex;
+}
+
+.share_dropdown_item {
+    display: flex;
+    padding: 9px 20px 9px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.share_dropdown_item:hover {
+    background: var(--Light-Blue, #EDF3FC);
+}
+
+.share_dropdown_item_text {
+    color: var(--Black, #141919);
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}

@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>{% block title %}My Blog{% endblock %}</title>
+    <title>Company Detail</title>
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news/slider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news/main.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news/editorPick.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news/timelineTagsComp.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/glider.css' %}">
+
+    <!-- For responsive -->
+
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+
+    <!-- Inter 400 -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+    <!-- Inter 700 -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    {% include 'blog/menu.html' %}
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'js/mainSlider.js' %}"></script>
+    <script src="{% static 'js/timeLineTags/timelineTags.js' %}"></script>
+    <script src="{% static 'js/timeLineTags/searchFocus.js' %}"></script>
+    <script src="{% static 'js/shareBtn.js' %}"></script>
+    <script src="{% static 'js/glider.min.js' %}"></script>
+    <script src="{% static 'js/glider_editor_pick.js' %}"></script>
+    <script src="{% static 'js/glider_main_slider.js' %}"></script>
+    <script src="{% static 'js/timeLineTags/sidebarDropdown.js' %}"></script>
+
+</body>
+</html>
